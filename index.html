@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properti Indah - Jual & Sewa Rumah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🏡 Properti Indah</h1>
+    <nav>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#listing">Listing</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <button id="modeToggle">🌙</button>
+  </header>
+
+  <!-- BERANDA -->
+  <section id="beranda" class="hero">
+    <h2>Temukan Rumah Impian Anda Bersama Kami</h2>
+    <p>Jual, beli, dan sewa properti dengan mudah dan cepat.</p>
+    <a href="#listing" class="btn">Lihat Listing</a>
+  </section>
+
+  <!-- LISTING -->
+  <section id="listing" class="listing">
+    <h2>Properti Terbaru</h2>
+    <div class="property-container">
+
+      <div class="property-card">
+        <img src="OIP (1).jpeg" alt="Rumah 1">
+        <h3>Rumah Minimalis Moderen di Puncak Bogor</h3>
+        <p>Harga: Rp 850.000.000</p>
+        <p>3 Kamar Tidur | 2 Kamar Mandi | 120 m²</p>
+        <a href="#" class="btn-detail">Detail</a>
+      </div>
+
+      <div class="property-card">
+        <img src="APTR.jpeg" alt="Rumah 2">
+        <h3>Apartemen Mewah dan Indah di Jakarta</h3>
+        <p>Harga: Rp 1.200.000.000</p>
+        <p>2 Kamar Tidur | 1 Kamar Mandi | 90 m²</p>
+        <a href="#" class="btn-detail">Detail</a>
+      </div>
+
+      <!-- PERBAIKAN: Kelas yang sebelumnya kosong (" ") kini diisi dengan "property-card" -->
+      <div class="property-card">
+        <img src="vila.jpeg" alt="Rumah 3">
+        <h3>Villa Nyaman dan Aman di Bali</h3>
+        <p>Harga: Rp 2.500.000.000</p>
+        <p>4 Kamar Tidur | 3 Kamar Mandi | 200 m²</p>
+        <a href="#" class="btn-detail">Detail</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG KAMI -->
+  <section id="tentang" class="about">
+    <h2>Tentang Kami</h2>
+    <p>
+      Properti Indah adalah platform terpercaya untuk jual, beli, dan sewa properti di seluruh Indonesia.
+      Kami berkomitmen memberikan pelayanan terbaik agar Anda bisa menemukan hunian impian dengan cepat dan aman.
+    </p>
+    <p>
+      Dengan pengalaman lebih dari 10 tahun, kami telah membantu ribuan keluarga memiliki rumah idaman mereka.
+    </p>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak" class="contact">
+    <h2>Kontak Kami</h2>
+    <form>
+      <label>Nama:</label>
+      <input type="text" placeholder="Masukkan nama Anda" required>
+
+      <label>Email:</label>
+      <input type="email" placeholder="Masukkan email Anda" required>
+
+      <label>Pesan:</label>
+      <textarea placeholder="Tulis pesan Anda..." required></textarea>
+
+      <button type="submit" class="btn">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>©Lintangnur_001 | Properti Indah - Jual & Sewa Rumah</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('modeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀' : '🌙';
+    });
+  </script>
+</body>
+</html>

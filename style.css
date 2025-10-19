@@ -1,0 +1,345 @@
+/* === FONT & DASAR === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf6ff;
+  color: #1a1a1a;
+  transition: background 0.6s, color 0.6s;
+}
+
+/* === HEADER === */
+header {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  animation: slideDown 0.8s ease;
+}
+
+header h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ffca28;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+#modeToggle {
+  background: rgba(255,255,255,0.3);
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  transition: 0.3s;
+}
+
+#modeToggle:hover {
+  background: rgba(255,255,255,0.5);
+  transform: scale(1.1);
+}
+
+/* === HERO SECTION === */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ff6a88, #ff99ac, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  color: white;
+  animation: gradientMove 10s ease infinite, fadeIn 1s ease;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h2 {
+  font-size: 2.3em;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.hero .btn {
+  background: #fff;
+  color: #6a11cb;
+  padding: 12px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+}
+
+.hero .btn:hover {
+  background: #6a11cb;
+  color: white;
+  transform: scale(1.08);
+}
+
+/* === LISTING === */
+.listing {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff7ff;
+}
+
+.listing h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #6a11cb;
+  text-shadow: 1px 1px 5px rgba(106,17,203,0.2);
+}
+
+.property-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.property-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(106,17,203,0.2);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.4s;
+  animation: fadeInUp 0.8s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(255,105,180,0.3);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-card h3 {
+  margin: 15px 0 10px;
+  color: #6a11cb;
+}
+
+.property-card p {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.btn-detail {
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 10px 25px;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(255,118,150,0.3);
+}
+
+.btn-detail:hover {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transform: scale(1.05);
+}
+
+/* === TENTANG KAMI === */
+.about {
+  background: linear-gradient(135deg, #d9efff, #f7e8ff);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #6a11cb;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 15px;
+  font-size: 1em;
+  line-height: 1.8;
+  color: #76588a;
+}
+
+/* === KONTAK === */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff7ff;
+}
+
+.contact h2 {
+  font-size: 2em;
+  color: #6a11cb;
+  margin-bottom: 25px;
+}
+
+form {
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 1s ease;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 2px solid #d4aaff;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 10px rgba(106,17,203,0.3);
+}
+
+button.btn {
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+button.btn:hover {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transform: translateY(-3px);
+}
+
+/* === FOOTER === */
+footer {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  letter-spacing: 0.3px;
+}
+
+/* === DARK MODE === */
+.dark-mode {
+  background: #0e0e1a;
+  color: #f1f1f1;
+}
+
+.dark-mode header {
+  background: linear-gradient(90deg, #1a1a40, #4c0070);
+  box-shadow: 0 3px 15px rgba(255,255,255,0.1);
+}
+
+.dark-mode .hero {
+  background: linear-gradient(135deg, #4c0070, #240046, #5a189a);
+  color: #fff;
+}
+
+.dark-mode .property-card {
+  background: #1a1a2e;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.05);
+}
+
+.dark-mode .about {
+  background: #1f1b2d;
+}
+
+.dark-mode .contact {
+  background: #121020;
+}
+
+.dark-mode footer {
+  background: linear-gradient(90deg, #240046, #3c096c);
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background: #202040;
+  color: white;
+  border: 2px solid #6a11cb;
+}
+
+.dark-mode button.btn {
+  background: linear-gradient(90deg, #9d4edd, #5a189a);
+}
+
+.dark-mode .btn-detail {
+  background: linear-gradient(90deg, #9d4edd, #5a189a);
+}
